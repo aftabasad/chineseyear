@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "ChineseYear.py",
         "cursor": {
-          "lineNumber": 28,
-          "column": 53
+          "lineNumber": 29,
+          "column": 43
         },
         "config": {
           "runtime": "python3.8",
@@ -92,7 +92,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1607659405262
+    "lastSave": 1607662339578
   },
   "VCS_STATE": {
     "provider": "GitHub",
