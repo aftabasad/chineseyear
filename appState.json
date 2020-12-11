@@ -1,0 +1,104 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "f1e43523-4e10-4e87-be6e-b68543c6d9f1": {
+        "id": "f1e43523-4e10-4e87-be6e-b68543c6d9f1",
+        "parent": null,
+        "name": "ChineseYear.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ChineseYear.py",
+        "cursor": {
+          "lineNumber": 28,
+          "column": 53
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "ChineseYear"
+        },
+        "triggers": [
+          {
+            "resourceName": "alexaSKaa97295ea2ba4c20a0d2d059cface7e5",
+            "config": {}
+          }
+        ],
+        "lastUpdated": 1607658051180,
+        "testCases": {
+          "69751117-842b-45c3-9b0b-48a300b8654d": {
+            "id": "69751117-842b-45c3-9b0b-48a300b8654d",
+            "name": "Test event",
+            "functionId": "f1e43523-4e10-4e87-be6e-b68543c6d9f1",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "f1e43523-4e10-4e87-be6e-b68543c6d9f1"
+    ],
+    "currentFileId": "f1e43523-4e10-4e87-be6e-b68543c6d9f1",
+    "resources": {
+      "alexaSKaa97295ea2ba4c20a0d2d059cface7e5": {
+        "name": "alexaSKaa97295ea2ba4c20a0d2d059cface7e5",
+        "type": "ALEXA",
+        "config": {
+          "type": 1,
+          "verifiedID": true,
+          "skillID": "amzn1.ask.skill.aa97295e-a2ba-4c20-a0d2-d059cface7e5",
+          "applicationID": ""
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "ask_sdk_core ": {
+          "name": "ask_sdk_core ",
+          "version": "1.13.0",
+          "dev": false,
+          "language": "python"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.4.1",
+    "projectName": "ChineseYear",
+    "projectDescription": "Outputs animal and characteristics for specific Chinese year",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {},
+    "lastSave": 1607659405262
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "chineseyear",
+      "url": "https://github.com/aftabasad/chineseyear"
+    }
+  }
+}
