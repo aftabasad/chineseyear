@@ -1,3 +1,5 @@
+import boto3
+ddb = boto3.client("dynamodb")
 from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import AbstractRequestHandler
 from ask_sdk_core.dispatch_components import AbstractExceptionHandler
@@ -26,6 +28,19 @@ class ChineseYearIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         year = handler_input.request_envelope.request.intent.slots['year'].value
+        try:
+            data = ddb.get_item(
+                TableName="ChineseYear",
+                Key={
+                    'Year': {
+                        'N': Year
+                    }
+                }
+            )
+        except BaseException as e:
+            print(e)
+            raise(e)
+ 
         speech_text = "Your animal is lion"
         handler_input.response_builder.speak(speech_text).set_should_end_session(False)
         return handler_input.response_builder.response    

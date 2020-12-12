@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "ChineseYear.py",
         "cursor": {
-          "lineNumber": 29,
-          "column": 43
+          "lineNumber": 13,
+          "column": 59
         },
         "config": {
           "runtime": "python3.8",
@@ -34,7 +34,7 @@
             "id": "69751117-842b-45c3-9b0b-48a300b8654d",
             "name": "Test event",
             "functionId": "f1e43523-4e10-4e87-be6e-b68543c6d9f1",
-            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
           }
         }
@@ -53,6 +53,25 @@
           "verifiedID": true,
           "skillID": "amzn1.ask.skill.aa97295e-a2ba-4c20-a0d2-d059cface7e5",
           "applicationID": ""
+        }
+      },
+      "ddbChineseYear": {
+        "name": "ddbChineseYear",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:492482921988:table/ChineseYear",
+            "name": "ChineseYear",
+            "partitionKey": "Year",
+            "partitionKeyType": "N",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "",
+            "payPerRequest": true,
+            "mode": 1,
+            "secondaryIndexes": {}
+          }
         }
       }
     },
@@ -79,6 +98,19 @@
           "version": "1.13.0",
           "dev": false,
           "language": "python"
+        },
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.12.27",
+          "dev": true,
+          "notRemovable": false
+        },
+        "boto3 ": {
+          "name": "boto3 ",
+          "version": "1.12.27",
+          "dev": false,
+          "language": "python"
         }
       }
     }
@@ -92,7 +124,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1607662339578
+    "lastSave": 1607735030505
   },
   "VCS_STATE": {
     "provider": "GitHub",
