@@ -19,7 +19,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 
     def handle(self, handler_input, exception):
         print(exception)
-        handler_input.response_builder.speak("Sorry, there was some problem. Please try again!!")
+        handler_input.response_builder.speak("Year not found in the database or other problem. Please try again!!")
         return handler_input.response_builder.response
 
 class ChineseYearIntentHandler(AbstractRequestHandler):
@@ -27,23 +27,26 @@ class ChineseYearIntentHandler(AbstractRequestHandler):
         return is_intent_name("ChineseYearIntent")(handler_input)
 
     def handle(self, handler_input):
-        year = handler_input.request_envelope.request.intent.slots['year'].value
+        year = str(handler_input.request_envelope.request.intent.slots['year'].value)
+        
         try:
             data = ddb.get_item(
                 TableName="ChineseYear",
                 Key={
                     'Year': {
-                        'N': Year
+                        'N': year
                     }
                 }
             )
-        except BaseException as e:
-            print(e)
-            raise(e)
- 
-        speech_text = "Your animal is lion"
+        except:
+            speech_text = "Exception: Year not found in the database..."
+            handler_input.response_builder.speak(speech_text).set_should_end_session(False)
+            return {"message": "Failed at line 42"}
+
+        speech_text = "Your animal is a " + data['Item']['Animal']['S'] + '. Wanna know something else? Apparently you are ' + data['Item']['Characteristics']['S']
         handler_input.response_builder.speak(speech_text).set_should_end_session(False)
         return handler_input.response_builder.response    
+        
 
 sb = SkillBuilder()
 sb.add_request_handler(LaunchRequestHandler())

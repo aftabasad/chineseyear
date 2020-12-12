@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "ChineseYear.py",
         "cursor": {
-          "lineNumber": 13,
-          "column": 59
+          "lineNumber": 22,
+          "column": 94
         },
         "config": {
           "runtime": "python3.8",
@@ -28,7 +28,7 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1607658051180,
+        "lastUpdated": 1607750550815,
         "testCases": {
           "69751117-842b-45c3-9b0b-48a300b8654d": {
             "id": "69751117-842b-45c3-9b0b-48a300b8654d",
@@ -78,7 +78,7 @@
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -105,12 +105,6 @@
           "version": "1.12.27",
           "dev": true,
           "notRemovable": false
-        },
-        "boto3 ": {
-          "name": "boto3 ",
-          "version": "1.12.27",
-          "dev": false,
-          "language": "python"
         }
       }
     }
@@ -124,7 +118,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1607735030505
+    "lastSave": 1607754410677
   },
   "VCS_STATE": {
     "provider": "GitHub",
